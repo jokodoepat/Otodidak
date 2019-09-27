@@ -61,7 +61,7 @@ const update = async (id, updated_data) => {
     };
 
     try {
-        let query = await User.findOneAndUpdate(
+        let query = await Book.findOneAndUpdate(
             {
                 _id: id
             },
@@ -77,7 +77,7 @@ const update = async (id, updated_data) => {
 
 const destroy = async id => {
     try {
-        let query = await User.findOneAndDelete({
+        let query = await Book.findOneAndDelete({
             _id: id
         }).exec();
 
